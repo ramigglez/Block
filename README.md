@@ -22,17 +22,17 @@
 ## HOW TO
 
 <pre>
+
     require_once './Block/Block.php';
+    require_once './Chain/Chain.php';
 
-    $aBlock = new Block (1, 'Data 1', '0', 0);
+    $Block = new Chain;
 
-    print_r ($aBlock);
+    $Block->mine(new Block(0,'hi','0',0));
+    $Block->mine(new Block(0,'hi 2','0',0));
+    $Block->mine(new Block(0,'hi 3','0',0));
 
-    $aBlock = new Block (2, 'Data 2', $aBlock->getCurrentHash(), 0);
-
-    print_r ($aBlock);
-
-    $aBlock = new Block (3, 'Data 3', $aBlock->getCurrentHash(), 0);
-
-    print_r ($aBlock);
+    
+    print_r($Block);
+    
 </pre>
