@@ -28,9 +28,9 @@
 
     $Block = new Chain;
 
-    $Block->mine(new Block(0,'hi','0',0));
-    $Block->mine(new Block(0,'hi 2','0',0));
-    $Block->mine(new Block(0,'hi 3','0',0));
+    $Block->mine(new Block('Data'));
+    $Block->mine(new Block('Data 2'));
+    $Block->mine(new Block('Data 3'));
 
     
     print_r($Block);

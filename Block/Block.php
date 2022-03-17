@@ -8,7 +8,7 @@ class Block {
     private $timestamp = null;
     private $nonce = null;
 
-    public function __construct ($index = 1,$transaction,$previous_hash,$nonce) {
+    public function __construct ($transaction,$index = 0,$previous_hash = '0',$nonce = 0) {
         $this->index = $index ?? 1;
         $this->previous_hash = $previous_hash ?? str_repeat("0",64);
         $this->transaction = $transaction;
